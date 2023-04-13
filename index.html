@@ -3,7 +3,12 @@
 <body>
 
 <h1>test</h1>
-<script>window.parent.location = "https://redcap.ucsf.edu/surveys/?s=THDMY4WARWANJ4AD"</script>
+<script>
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open( "GET", "https://redcap.ucsf.edu/api/", false ); // false for synchronous request
+xmlHttp.send( null );
+console.log(xmlHttp.responseText);
+</script>
 
 </body>
 </html>
